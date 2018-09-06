@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Swagger</title>
+
+    <script src="//unpkg.com/swagger-ui-dist@3/swagger-ui-bundle.js"></script>
+    <link rel="stylesheet" href="//unpkg.com/swagger-ui-dist@3/swagger-ui.css">
+
+    <style>
+        .swagger-ui .response-col_description__inner div.markdown p, .swagger-ui .response-col_description__inner div.renderedMarkdown p {
+            font-family: sans-serif;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 1.6em;
+        }
+
+        .swagger-ui .opblock-body pre, .swagger-ui .model, .swagger-ui textarea.body-param__text {
+            font-family: "Menlo", "Consolas", "Ubuntu Mono", monospace;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 1.6em;
+        }
+
+        .swagger-ui .model-box {
+            width: 100%;
+        }
+
+        .swagger-ui .model-box .model tr {
+            padding-bottom: 1em;
+        }
+
+        .swagger-ui .responses-header .response-col_status {
+            font-size: 12px;
+        }
+
+        .swagger-ui .response-col_links {
+            display: none;
+        }
+
+        .swagger-ui .tablinks[data-name="example"] {
+            color: blue;
+        }
+
+        .swagger-ui .tablinks[data-name="model"] {
+            color: red;
+        }
+
+        .swagger-ui .opblock-section .opblock-description-wrapper .model table td {
+            padding-bottom: 6px;
+        }
+
+        .swagger-ui {
+            margin-bottom: 4em;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="swagger"></div>
+
+    <script>
+        SwaggerUIBundle({
+            dom_id: '#swagger',
+            url: './swagger.yml'
+        })
+    </script>
+
+</body>
+
+</html>
